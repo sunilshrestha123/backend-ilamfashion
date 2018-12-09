@@ -1,0 +1,39 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "build the node application ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "nodemon --exec babel-node src/index.js",
+    "seed": "knex seed:run --knexfile src/knexConfig.js",
+    "seed:make": "knex seed:make --knexfile src/knexConfig.js",
+    "migrate:make": "knex migrate:make --knexfile src/knexConfig.js",
+    "migrate:latest": "knex migrate:latest --knexfile src/knexConfig.js",
+    "migrate:rollback": "knex migrate:rollback --knexfile src/knexConfig.js"
+  },
+  "keywords": [
+    "js",
+    "api"
+  ],
+  "author": "sunil shrestha",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "bcrypt": "^3.0.2",
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "morgan": "^1.9.1",
+    "pg": "^7.6.1",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^6.26.3",
+    "nodemon": "^1.18.6"
+  }
+}
