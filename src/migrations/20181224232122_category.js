@@ -1,15 +1,15 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('category', table => {
-    table.integer('id').primary();
     table
-      .text('ct_name')
-      .notNullable()
-      .unique();
-    table.text('ct_des').notNullable();
+      .increments('id')
+      .primary()
+      .unsigned();
+    table.text('category_name').notNullable();
+    table.text('category_des').notNullable();
     table
-      .boolean('ct_status')
+      .boolean('status')
       .notNullable()
-      .default(true);
+      .defaultTo(false);
 
     table.timestamps(true, true);
   });

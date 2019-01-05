@@ -5,16 +5,20 @@ const router = express();
 router.get('/', (req, res, next) => {
   categoryService
     .getAllCategory()
-    .then(category => res.status(201).send({ category: category }))
-
+    .then(category => {
+      console.log(category);
+      res.status(201).send({ category: category });
+    })
     .catch(err => next(err));
 });
 router.post('/', (req, res, next) => {
+  console.log('category', req.body);
   categoryService
+
     .addCategory(req.body)
-    .then(data => {
-      console.log(data);
-      res.status(200).send({ data });
+    .then(category => {
+      console.log(category);
+      res.status(200).send({ category });
     })
     .catch(err => next(err));
 });

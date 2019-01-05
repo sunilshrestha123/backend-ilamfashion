@@ -19,18 +19,18 @@ router.get('/:id', (req, res, next) => {
       console.log(data);
       res.status(201).send({ data: data });
     })
-    .catch(erro => next(err));
-});
-router.post('/', (req, res, next) => {
-  console.log('body', req.body);
-  userService
-    .getUserUpdate(req.body)
-    .then(data => {
-      console.log(data);
-      res.status(200).send({ data });
-    })
     .catch(err => next(err));
 });
+// router.post('/', (req, res, next) => {
+//   console.log('body', req.body);
+//   userService
+//     .getUserUpdate(req.body)
+//     .then(data => {
+//       console.log(data);
+//       res.status(200).send({ data });
+//     })
+//     .catch(err => next(err));
+// });
 
 //post
 router.post('/', (req, res, next) => {

@@ -8,8 +8,8 @@ class Category {
     let result = await knexfile('category');
     return result;
   }
-  static async addCategory() {
-    return await knexfile('category').insert(data);
+  static async addCategory(category) {
+    return await knexfile('category').insert(category);
   }
 }
 

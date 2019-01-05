@@ -8,7 +8,7 @@ import logger from './logger';
 import { hashing } from './utils/crypt';
 
 const app = express();
-const port = 3001;
+const port = 3002;
 app.use(morgan('combined'));
 
 app.use(cors());
