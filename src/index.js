@@ -13,7 +13,7 @@ app.use(morgan('combined'));
 
 app.use(cors());
 app.use(parse.json());
-
+// app.use(app.router);
 app.use('/api', router);
 
 // app.get('/test', async (req, res) => {
@@ -21,4 +21,5 @@ app.use('/api', router);
 //   console.log(await hashing('teting'));
 //   res.status(200).send({ data: hashing('sunil') });
 // });
+
 app.listen(port, () => logger.info('message'));

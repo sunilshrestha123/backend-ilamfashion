@@ -1,7 +1,7 @@
-import winston from "winston";
+import winston from 'winston';
 
 const logger = winston.createLogger({
-  level: "info",
+  level: 'info',
   format: winston.format.combine(
     winston.format.json(),
     winston.format.timestamp()
@@ -15,10 +15,10 @@ const logger = winston.createLogger({
       maxsize: 5120000,
       maxFiles: 5,
       filename: `${__dirname}/logs/logs-api.log`,
-      level: "error"
+      level: 'error',
     }),
-    new winston.transports.File({ filename: "combined.log" })
-  ]
+    new winston.transports.File({ filename: 'combined.log' }),
+  ],
 });
 
 //
@@ -28,7 +28,7 @@ const logger = winston.createLogger({
 
 logger.add(
   new winston.transports.Console({
-    format: winston.format.simple()
+    format: winston.format.simple(),
   })
 );
 

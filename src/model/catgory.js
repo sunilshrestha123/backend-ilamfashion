@@ -11,6 +11,9 @@ class Category {
   static async addCategory(category) {
     return await knexfile('category').insert(category);
   }
+  static async updateById(id) {
+    return await knexfile(category).update(category);
+  }
 }
 
 export default Category;

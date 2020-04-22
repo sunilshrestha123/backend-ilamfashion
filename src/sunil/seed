@@ -1,0 +1,19 @@
+exports.seed = function(knex, Promise) {
+  // Deletes ALL existing entries
+  return knex('register')
+    .del()
+    .then(function() {
+      // Inserts seed entries
+      return knex('register').insert([
+        {
+          id: 1,
+          first_name: 'sunil',
+          middle_name: '',
+          last_name: 'shrestha',
+          gender: 'male',
+          email: 'ilamalisunilshrestha00@gmail.com',
+          password: 'kabita123'
+        }
+      ]);
+    });
+};

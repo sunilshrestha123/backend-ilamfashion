@@ -1,12 +1,11 @@
-require('./knexConfig');
+// require('./knexConfig');
 
-import express from 'express';
-const morgan = require('morgan');
+// import express from 'express';
+// import Contactus from '../model/contactus';
+// import conactusController from '../controller/contactusController';
+// const morgan = require('morgan');
 
-const app = express();
+// const app = express();
+// app.use('/contactus', conactusController);
 
-app.post('./category', async (req, res) => {
-  res.send(200, 'category is running');
-});
-
-export default app;
+// export default router;

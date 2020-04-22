@@ -1,3 +1,4 @@
+
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
   return knex('category')
@@ -6,14 +7,23 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('category').insert([
         {
-          category_name: 'TV',
-          category_des: 'these contain all type of tv equipment'
+          id: 1,
+          ct_name: 'Home Application',
+          ct_des: 'these category contaion home equipment',
+          ct_status: 'true'
         },
         {
-          category_name: 'Mobile',
-          category_des: 'these contain all type of Mobile equipment'
+          id: 2,
+          ct_name: 'Electronic',
+          ct_des: 'these category contain the electronic item',
+          ct_status: 'true'
         },
-        { category_name: 'Cake', category_des: 'contain cake ' }
+        {
+          id: 3,
+          ct_name: 'Toy & Kids',
+          ct_des: 'these category kids and toy items',
+          ct_status: 'true'
+        }
       ]);
     });
 };
